@@ -6,8 +6,9 @@ import './admin-login.scss'
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
 import ReactSnackBar from "react-js-snackbar";
-import {getAqi} from '../actions/LoginActions'
-
+import {CONFIG,CONFIG_PATH} from '../Shared/constant';
+import axios from 'axios'
+import {doLogin} from '../actions/LoginActions'
 class Login extends Component {
   state = {
     isLoggedin : false,
@@ -29,16 +30,26 @@ class Login extends Component {
         })
       }
     }  
-   async doAdminLogin(e){
-     if(this.state.email === '' || this.state.password === ''){
-                this.setState({ Show: true, Showing: true });
-                  setTimeout(() => {
-                    this.setState({ Show: false, Showing: false });
-                  }, 3000);
-            }
-            else{
-            // this.getAqi()
-        }
+    async doAdminLogin(e){
+      let req = {
+        email: this.state.email,
+        password: this.state.password
+      }  
+      await doLogin(req,res =>{
+            console.log(res)
+        })
+   //  if(this.state.email === '' || this.state.password === ''){
+    //             this.setState({ Show: true, Showing: true });
+    //               setTimeout(() => {
+    //                 this.setState({ Show: false, Showing: false });
+    //               }, 3000);
+    //         }
+    //         else{
+    //           axios.get(CONFIG.DBURL + 'aqi/all').then(res => {
+    //             console.log(res)
+    //         })
+    //         // console.log(CONFIG.DBURL)
+    //     }
       }
 
     render() {
