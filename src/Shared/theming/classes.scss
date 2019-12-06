@@ -1,0 +1,227 @@
+/* Template classes to use throughout the application */
+
+.flex {
+    display: flex;
+
+    // horizontally
+    &.middle {
+        justify-content: center;
+    }
+
+    // vertically
+    &.center {
+        align-items: center;
+    }
+
+    &.bottom {
+        align-items: flex-end;
+    }
+
+    // flex fill to width/height
+    &.fill {
+        flex-grow: 1;
+    }
+
+    .fill {
+        flex-grow: 1;
+    }
+
+    // boxes
+    &.row {
+        flex-direction: row;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+    
+}
+
+.oz-style {
+    &.open-sanf {
+        font-family: Roboto, "Helvetica Neue", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    }
+
+    &.bebas-neue {
+        font-family: "Bebas Neue";
+    }
+
+    &.c1 {
+        color: #000000;
+    }
+    &.b1 {
+        background: #000000;
+    }
+
+    &.c2 {
+        color: #283038;
+    }
+    &.b2 {
+        background: #283038;
+    }
+
+    &.c3 {
+        color: #333B44;
+    }
+    &.b3 {
+        background: #333B44;
+    }
+
+    &.c4 {
+        color: #808080;
+    }
+    &.b4 {
+        background: #808080;
+    }
+
+    &.c5 {
+        color: #CFCFCF;
+    }
+    &.b5 {
+        background: #CFCFCF;
+    }
+
+    &.c6 {
+        color: #F4F4F4;
+    }
+    &.b6 {
+        background: #F4F4F4;
+    }
+
+    &.c7 {
+        color: #086B5F;
+    }
+    &.b7 {
+        background: #086B5F;
+    }
+
+    &.c8 {
+        color: #149179;
+    }
+    &.b8 {
+        background: #149179;
+    }
+
+    &.c9 {
+        color: #15B79C;
+    }
+    &.b9 {
+        background: #15B79C;
+    }
+
+    &.c10 {
+        color: #0AC9B6;
+    }
+    &.b10 {
+        background: #0AC9B6;
+    }
+
+    &.c11 {
+        color: #61E5D5;
+    }
+    &.b11 {
+        background: #61E5D5;
+    }
+
+    &.c12 {
+        color: #77C16D;
+    }
+    &.b12 {
+        background: #77C16D;
+    }
+
+    &.c13 {
+        color: #E50E2E;
+    }
+    &.b13 {
+        background: #E50E2E;
+    }
+
+    &.c14 {
+        color: #E76027;
+    }
+    &.b14 {
+        background: #E76027;
+    }
+
+    &.c15 {
+        color: #EF9C2E;
+    }
+    &.b15 {
+        background: #EF9C2E;
+    }
+
+    &.c16 {
+        color: #FFE545;
+    }
+    &.b16 {
+        background: #FFE545;
+    }
+
+    &.c17 {
+        color: #BECE49;
+    }
+    &.b17 {
+        background: #BECE49;
+    }
+
+    &.c18 {
+        color: #75C059;
+    }
+    &.b18 {
+        background: #75C059;
+    }
+
+    &.c19 {
+        color: #FFFFFF;
+    }
+    &.b19 {
+        background: #FFFFFF;
+    }
+
+    &.c20 {
+        color: #E6E7E8;
+    }
+    &.b20 {
+        background: #E6E7E8;
+    }
+}
+
+.oz-gas-level {
+    color: #6ecc58;
+
+    &.l0 {
+        color: #6ecc58 !important;
+    }
+    &.l1 {
+        color: #bbcf4c !important;
+    }
+    &.l2 {
+        color: #eac736 !important;
+    }
+    &.l3 {
+        color: #ed9a2e !important;
+    }
+    &.l4 {
+        color: #e8633a !important;
+    }
+    &.l5 {
+        color: #d63636 !important;
+    }
+}
+
+.live-color {
+    background-color: #6ecc58;
+}
+
+.warn-color {
+    background-color: #d63636;
+}
+
+.alive-color {
+    background-color: #fcdc01;
+}
+
+.flex-auto{
+    flex: auto;
+}
