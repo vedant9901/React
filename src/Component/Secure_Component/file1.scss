@@ -1,0 +1,125 @@
+/* Style guide for user module */
+@import "../../Shared/theming/classes.scss";
+@import "../../Shared/theming/constants.scss";
+
+.ozs-sidenav-logo {
+    padding: 16px;
+}
+
+.main-sidenav {
+    width: $oz-sidenav-width;
+    //width: 80px;
+}
+
+.ozs-toolbar {
+    box-shadow: 1px 1px 3px 1px rgba(200, 200, 200, 0.5);
+}
+
+.oz-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 250, 256, 0.6);
+    z-index: 1000;
+}
+
+.oz-menu-options {
+    margin: 16px 16px 0 16px;
+
+    .item {
+        padding: 0 6px;
+    }
+
+    label {
+        color: $oz-color-10;
+        font-weight: 400;
+        font-size: 10pt;
+        padding: 0 10px;
+    }
+
+
+    [mat-raised-button] {
+        background: $oz-color-6;
+        color: $oz-color-4;
+    }
+
+    button {
+        font-weight: 400;
+        font-size: 10pt;
+    }
+}
+
+.oz-control-buttons {
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    z-index: 1000;
+
+    button {
+        margin: 4px 0;
+        background: #BDBDBD;
+        transition: background 500ms ease;
+
+        &.active {
+            background: #0ac9b6;
+        }
+    }
+}
+
+.oz-list-container {
+    padding: 16px;
+
+    table {
+        width: 96%;
+        border-collapse: collapse;
+
+        th {
+            font-size: 11pt;
+            font-weight: 400;
+            color: #0ac9b6;
+            padding: 0 0 12px;
+            border-bottom: 1px solid #E0E0E0;
+
+            .subtitle {
+                padding: 8px 0 0;
+                font-size: 8.6pt;
+                font-weight: 300;
+            }
+        }
+
+        tbody {
+            tr {
+                transition: background 400ms ease;
+
+                td {
+                    text-align: center;
+                    font-size: 10pt;
+                    font-weight: 300;
+                    color: #616161;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #E0E0E0;
+
+                    .editMode{
+                        cursor: pointer;
+                        padding: 2px;
+                    }
+                }
+
+                &:hover {
+                    background: #FAFAFA;
+                }
+            }
+        }
+    }
+}
+
+.line-break {
+    width: 100%;
+    height: 1px;
+    margin: 8px 16px 16px 16px;
+}
+
+.box-title {
+    font-size: 16pt;
+    font-weight: 300;
+}
