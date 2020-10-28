@@ -107,9 +107,9 @@ class Login extends Component {
                 {this.state.isPasswordError ? (<Alert severity="error" >Password needs min 8 characters, 1 caps, 1 special and 1 number !</Alert>) : null}
 
               </div>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     )
   }

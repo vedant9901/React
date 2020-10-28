@@ -361,4 +361,28 @@ button.button:hover {
 }
 
 
-@media (max-width: 375) {}
+@media (max-width: 400px) {
+
+  .content{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .window {
+    width: 300px;
+    height: 450px;
+  }
+  .overlay{
+    width:300px;
+    height: 450px;
+  }
+  .limiter .welcome{
+    padding-top:40px;
+    Font-size:30px !important;
+  }
+  .formDiv {
+    margin: 10% 0%;
+}
+.limiter .btn {
+  margin: 20% 2%;
+}
+}

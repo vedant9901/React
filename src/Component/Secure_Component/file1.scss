@@ -20,7 +20,7 @@ body, html {
 }
 
 .header{
-    height: 60px;
+   // height: 60px;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #2C5AB5, #ff48fa);
 }
 
@@ -36,29 +36,30 @@ body, html {
     width: 50%;
     display: flex;
     float: right;
+    padding: 24px 0;
     flex-direction: row;
     justify-content: flex-end;
 }
 
 .Icon{
-    width: 50px;
-    height: 50px;
-    margin: 3% 2%;
-    font-size: larger;
-    color: white !important;
+  width: 50px;
+  height: 5px;
+  margin: 0 2%;
+  font-size: larger;
+  color: white !important;
 }
 
  
 .welcome {
        /* font-weight: 200; */
-       margin-top: auto !important;
+       padding: 20px 0;
        text-align: center;
        font-size: 1.5rem !important;
        //font-size: 20px;
        letter-spacing: 0px;
        letter-spacing: 0.05rem;
        color: white !important;
-       margin: 3% 2% !important;
+       margin: 0% 2% !important;
   }
 
 
@@ -152,3 +153,33 @@ body, html {
 .VideoPlayer video {
   width: auto !important;
 }
+
+.mainDiv{
+  max-width: 50%;
+  margin: 60px auto;
+}
+
+.react-multi-carousel-track{
+  text-align: center;
+}
+
+.mainDiv video{
+  width: auto !important;
+}
+
+@media (max-width: 768px){
+  .mainDiv {
+    max-width: 100%;
+  } 
+}
+
+@media (max-width: 480px){
+  .leftDiv{
+    width:80%;
+  }
+  .welcome {
+    font-size: 1.2rem !important;
+    margin: 0% 5% !important
+  }
+}
+

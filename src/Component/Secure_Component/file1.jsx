@@ -3,8 +3,8 @@ import './file1.scss';
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getVideos } from '../../actions/ContentActions';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import Button from '@material-ui/core/Button';
 import ReactPlayer from 'react-player'
 
@@ -31,10 +31,30 @@ export default class secureFile extends Component {
         this.setState({
             videos : response
         })
+        console.log(this.state.videos)
     }
 
 
     render() {
+        const responsive = {
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 1
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 1
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 1
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 1
+            }
+          };
         return (
             <div>
                 <div className="flex row header">
@@ -45,17 +65,57 @@ export default class secureFile extends Component {
                    <span className="Icon"><FontAwesomeIcon icon={faSignOutAlt} onClick={(e)=>{this.logout(e)}} /></span>
                    </div>
                 </div>
-               <div>
-               <div class="owl-carousel owl-theme">
-                    <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/23924346"></a></div>
-                    <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
-                    <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
-                    <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
-                    <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
-                    <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
-                    <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
-                    <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
-                </div>
+               <div className="mainDiv">
+
+               <Carousel responsive={responsive}  infinite={true}>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919638549990_1597043219510.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919409215070_1599480310663.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/15167175011_1597930499270.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919409215070_1599480310663.mp4'
+                            volume='1'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                </Carousel>
+
+                <br/>
+
+                <Carousel responsive={responsive}  infinite={true}>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919638549990_1597043219510.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919409215070_1599480310663.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/15167175011_1597930499270.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                <div><ReactPlayer
+                            url='http://media.begenuin.com/temp_video/919409215070_1599480310663.mp4'
+                            width='100%'
+                            controls = {true}
+                        /></div>
+                </Carousel>
+               
                </div>
             </div>
         )
