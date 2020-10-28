@@ -7,8 +7,9 @@ import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();
-ReactDOM.render(<Router history={history}>
-    <App />
+ReactDOM.render(
+<Router history={history}>
+    <App/>
   </Router>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
